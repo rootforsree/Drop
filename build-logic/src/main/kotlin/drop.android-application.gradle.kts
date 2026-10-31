@@ -1,7 +1,15 @@
+import org.gradle.api.artifacts.VersionCatalogsExtension
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.plugin.compose")
 }
+
+// Accessor codegen does not provide `libs` inside precompiled script
+// plugins even with the catalog imported in build-logic settings (proven
+// by two failed CI runs), so look the catalog up from the consuming
+// project's extensions at apply time. Same `findLibrary` call shape.
+val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
 android {
     namespace = "com.rootdrop.share"
