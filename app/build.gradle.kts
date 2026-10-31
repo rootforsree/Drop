@@ -5,9 +5,12 @@ plugins {
 
 dependencies {
     // Local HTTP server (Ktor CIO) and QR encoding (ZXing).
-    implementation(libs.findLibrary("ktor-server-core").get())
-    implementation(libs.findLibrary("ktor-server-cio").get())
-    implementation(libs.findLibrary("zxing-core").get())
+    // Project build scripts get type-safe catalog accessors, so the
+    // alias segments split on hyphens here (unlike the convention
+    // plugin, which holds a real VersionCatalog and uses findLibrary).
+    implementation(libs.ktor.server.core)
+    implementation(libs.ktor.server.cio)
+    implementation(libs.zxing.core)
     // Type-safe navigation route.
-    implementation(libs.findLibrary("kotlinx-serialization-json").get())
+    implementation(libs.kotlinx.serialization.json)
 }
