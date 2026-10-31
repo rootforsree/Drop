@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="drop_title">Drop</string>
+    <string name="drop_pick_files">Pick files</string>
+    <string name="drop_start_sharing">Start sharing</string>
+    <string name="drop_stop_sharing">Stop sharing</string>
+    <string name="drop_retry">Retry</string>
+    <string name="drop_copy_url">Copy</string>
+    <string name="drop_status_idle">Not sharing</string>
+    <string name="drop_status_starting">Starting sharing…</string>
+    <string name="drop_status_sharing">Sharing on WiFi: %1$s</string>
+    <string name="drop_no_files">No files picked yet.</string>
+    <string name="drop_qr_description">QR code for the download link</string>
+    <string name="drop_remove_file">Remove %1$s</string>
+    <string name="drop_url_copied">Link copied</string>
+    <string name="drop_stop_failed">Could not stop sharing. Try again.</string>
+    <string name="drop_error_no_files">Pick at least one file first.</string>
+    <string name="drop_error_start_failed">Sharing could not start. Check WiFi and try again.</string>
+    <string name="drop_clip_label">Drop link</string>
+    <string name="app_name">Drop</string>
+</resources>
