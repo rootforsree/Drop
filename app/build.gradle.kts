@@ -1,6 +1,6 @@
 plugins {
     id("drop.android-application")
-    alias(libs.plugins.kotlinSerialization)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 dependencies {
