@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Drop" parent="Theme.Material3.DayNight.NoActionBar" />
+    <!-- Framework parent on purpose: the app is 100 percent Compose, so
+         the Activity theme only covers the launch window. Depending on a
+         library theme name here broke AAPT linking, and nothing in the
+         UI reads the Activity theme (colors come from DropTheme). -->
+    <style name="Theme.Drop" parent="@android:style/Theme.Material.DayNight.NoActionBar" />
 </resources>

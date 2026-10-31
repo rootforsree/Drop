@@ -181,7 +181,7 @@ class DropShareServer(
                         )
                         return@get
                     }
-                    call.response.header(
+                    call.response.headers.append(
                         HttpHeaders.ContentDisposition,
                         attachmentValue(file.displayName),
                     )
@@ -203,7 +203,7 @@ class DropShareServer(
                     }
                 }
                 get("/all.zip") {
-                    call.response.header(
+                    call.response.headers.append(
                         HttpHeaders.ContentDisposition,
                         attachmentValue(ZIP_FILE_NAME),
                     )
